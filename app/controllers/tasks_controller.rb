@@ -3,6 +3,7 @@ class TasksController < ApplicationController
   before_action :require_user
   before_action :find_task, only: [:edit, :update, :destroy]
 
+
   def new
     @task = Task.new
   end
@@ -24,8 +25,6 @@ class TasksController < ApplicationController
   end
 
   def update
-    generate_title
-
     if @task.update(task_params)
       flash["notice"] = "You're task has been updated"
       redirect_to user_path(@user)
@@ -55,14 +54,5 @@ class TasksController < ApplicationController
 
   def find_task
     @task = Task.find_by slug: params[:id]
-  end
-
-  def generate_title
-    body = params[:task]['body']
-    if body.strip.include? " "
-      @task.title = body[/^(\w+).(\w+)/]
-    else
-      @task.title = body
-    end
   end
 end

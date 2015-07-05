@@ -6,5 +6,9 @@ class Task < ActiveRecord::Base
   validates :body, presence: true, length: { minimum: 3 }
   validates :user_id, presence: true
 
+  after_validation(on: :update) do
+    :generate_title
+  end
+
   sluggable_column :title
 end
