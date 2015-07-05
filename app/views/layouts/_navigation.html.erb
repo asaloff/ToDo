@@ -20,6 +20,9 @@
      <%= link_to "New Task", new_user_task_path(current_user) %>
     </li>
     <li>
+     <%= link_to "Edit Profile", edit_user_path(current_user) %>
+    </li>
+    <li>
      <%= link_to "Logout", logout_path %>
     </li>
   <% else # not logged in %>

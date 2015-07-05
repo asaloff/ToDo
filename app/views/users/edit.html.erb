@@ -1,0 +1,3 @@
+<%= render "shared/content_title", title: "Edit " + @user.username.titleize + "'s info" %>
+<%= render 'shared/error', obj: @user %>
+<%= render 'form', submit_type: 'Update' %>

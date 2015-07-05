@@ -1,8 +1,10 @@
 <%= render 'shared/content_title', title: "#{@user.username.titleize}'s To Do List" %>
 
-<% if @user.tasks.empty? %>
+<div id="no-tasks">
+  <% if @user.tasks.empty? %>
     <%= render "tasks/no_tasks" %>
-<% end %>
+  <% end %>
+</div>
 
 <% @tasks.each do |task| %>
   <%= render 'tasks/task', task: task %>
