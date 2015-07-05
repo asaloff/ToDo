@@ -1,5 +1,6 @@
-<div id="<%= task.slug %>" class="well well-sm">
-   <%= link_to 'Edit', edit_user_task_path(@user, task), class: "btn btn-warning btn-small pull-right give-space", method: 'get' %>
-   <%= button_to 'Done', user_task_path(@user, task),class: "btn btn-danger btn-small pull-right give-space", method: 'delete', data: { confirm: "Are you sure?" }, remote: true %>
-  <p class="color-text"><strong><%= task.body %> <span class="pull-right black"> Priority: <span id="<%= priority_color(task) %>"><%= display_priority(task) %></span></span></strong></p>
+<div id="<%= task.slug %>" class="well well-sm clearfix">
+ <%= link_to 'Edit', edit_user_task_path(@user, task), class: "btn btn-warning btn-small pull-right give-space", method: 'get' %>
+ <%= button_to 'Done', user_task_path(@user, task),class: "btn btn-danger btn-small pull-right give-space", method: 'delete', data: { confirm: "Are you sure?" }, remote: true %>
+  <p class="color-text"><strong><%= task.body %></strong></p>
+  <p class="pull-left black"> Priority: <strong><span id="<%= priority_color(task) %>"><%= display_priority(task) %></span></strong></p>
 </div>

@@ -17,35 +17,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.nav {
-  margin-top: 10px;
-}
-
-div.nav-item {
-  margin-top: 8px;
-  float: left;
-  top: 50%;
+body { 
+    padding-top: 65px; 
 }
 
 .brand {
   font-size: 36px;
-}
-
-.give-space {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .submit-btn {
   padding: 0;
 }
 
-.color-text {
+p.color-text {
   color: #19BF96;
+  margin-bottom: 5px;
+  font-size: 1.1em;
 }
 
 .logo-color {
-  color: #E60000;
+  color: #19BF96;
   font-weight: bold;
+  width: 40%;
+}
+
+a.brand:hover { 
+  background-color: #D9FFF8 !important; 
+  color: #E60000;
+  text-decoration: none;
 }
 
 #punctuation-color {
@@ -64,14 +64,45 @@ div.nav-item {
   vertical-align: middle
 }
 
-ul.nav a.brand:hover { 
-  background-color: #D9FFF8 !important; 
-  color: #19BF96;
-}
 
 .navbar-inner {
   background-color: #D9FFF8;
-  height: 66px;
+}
+
+div#navbar {
+  background-color: #D9FFF8;
+}
+
+.navbar-toggle {
+  background-color: #19BF96;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #D9FFF8;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #19BF96;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #19BF96;
+  font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #8CDFCA;
+    color: #FFF;
+}
+
+.give-space {
+  margin-right: 10px;
 }
 
 .alert-success {
@@ -93,4 +124,5 @@ ul.nav a.brand:hover {
 
 .black {
   color: #333300;
+  margin: 0;
 }
