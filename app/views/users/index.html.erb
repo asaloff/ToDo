@@ -1,0 +1,6 @@
+<%= render 'shared/content_title', title: 'All Users' %>
+<% @users.each do |user| %>
+  <ul> 
+    <li><%= link_to user.username, user_path(user) %></li>
+  </ul>
+<% end %> 

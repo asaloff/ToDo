@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.nav {
+  margin-top: 10px;
+}
+
+div.nav-item {
+  margin-top: 8px;
+  float: left;
+  top: 50%;
+}
+
+.brand {
+  font-size: 36px;
+}
+
+.give-space {
+  margin-left: 15px;
+}
+
+.submit-btn {
+  padding: 0;
+}
+
+.color-text {
+  color: #19BF96;
+}
+
+.logo-color {
+  color: #E60000;
+  font-weight: bold;
+}
+
+#punctuation-color {
+  color: orange;
+}
+
+.btn-success {
+    background: #19BF96;
+}
+ 
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+    background: #149978;
+}
+
+.well-sm {
+  vertical-align: middle
+}
+
+ul.nav a.brand:hover { 
+  background-color: #D9FFF8 !important; 
+  color: #19BF96;
+}
+
+.navbar-inner {
+  background-color: #D9FFF8;
+  height: 66px;
+}
+
+.alert-success {
+  background-color: #8CDFCA;
+  color: #fff;
+}
+
+#red {
+  color: #FF0000;
+}
+
+#orange {
+  color: #FF9900;
+}
+
+#green {
+  color: #00CC00;
+}
+
+.black {
+  color: #333300;
+}

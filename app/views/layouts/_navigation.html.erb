@@ -1,0 +1,37 @@
+<ul class="nav navbar-nav">
+  <li>
+    <%= link_to login_path, class: 'brand logo-color' do %>
+      ToDo<span id="punctuation-color">!</span> 
+    <% end %>
+  </li>
+
+   <% if logged_in? %> 
+   <li>
+    <div class="nav-item">
+      <%= link_to "New Task", new_user_task_path(current_user), class: "btn btn-success btn-small give-space" %>
+    </div>
+  </li>
+  <% end %>
+
+  <% if logged_in? %>
+  <li>
+    <div class="nav-item">
+      <%= link_to "Logout", logout_path, class: "btn btn-success btn-small give-space" %>
+    </div>
+  </li>
+  <% else # not logged in %>
+  <li>
+    <div class="nav-item">
+      <%= link_to "Login", login_path, class: "btn btn-success btn-small give-space" %>
+    </div>
+  </li>
+
+  <li>
+    <div class="nav-item">
+      <%= link_to "Register", register_path, class: "btn btn-success btn-small give-space" %>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+
