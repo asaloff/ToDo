@@ -1,6 +1,6 @@
 <%= render 'shared/content_title', title: 'Login' %>
 
-<%= form_tag '/login' do %>
+<%= form_tag login_path do %>
   <div class="form-group">
     <%= label_tag :username %>
     </br>
@@ -13,3 +13,5 @@
   </div>
   <%= submit_tag 'Login', class: 'btn btn-small btn-success' %>
 <% end %>
+
+<small id="register-text">Not a member? <%= link_to 'Register here', register_path %></small>

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include Sluggable
 
-  has_secure_password validations: false
+  has_secure_password
 
   has_many :tasks
 

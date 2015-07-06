@@ -38,14 +38,14 @@ class TasksController < ApplicationController
 
     respond_to do |format|
         format.html { redirect_to user_path(@user) }
-        format.js 
+        format.js { @task.destroy }
     end
   end
 
   private
 
   def task_params
-    params.require(:task).permit(:body, :priority)
+    params.require(:task).permit(:body, :priority, :title)
   end
 
   def find_user
