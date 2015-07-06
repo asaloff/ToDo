@@ -1,1 +1,5 @@
 $('#<%= @task.slug %>').fadeOut(500);
+
+<% if @user.tasks.empty? %>
+  $('h4').after("<%= j render 'tasks/no_tasks' %>");
+<% end %>

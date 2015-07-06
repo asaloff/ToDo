@@ -38,7 +38,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
         format.html { redirect_to user_path(@user) }
-        format.js { @task.destroy }
+        format.js
     end
   end
 
