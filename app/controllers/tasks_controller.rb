@@ -14,7 +14,6 @@ class TasksController < ApplicationController
     generate_title
 
     if @task.save
-      flash["notice"] = "You're task was added successfully"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -26,7 +25,6 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash["notice"] = "You're task has been updated"
       redirect_to user_path(@user)
     else
       render 'edit'

@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def access_denied
-    flash["error"] = 'You do not have permissions to do that'
     redirect_to login_path
   end
 
